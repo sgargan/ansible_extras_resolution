@@ -1,0 +1,1 @@
+- debug: msg="creating instance for cluster '{{ cluster_name }}' '{{tags}}' "

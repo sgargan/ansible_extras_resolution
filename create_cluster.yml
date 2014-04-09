@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  gather_facts: False
+
+  tasks:
+  - {include: create_instance.yml,
+      tags: {
+        hostname: 'blah_server1',
+        ansible_groups: ["{{cluster_name}}", 'blah-servers'],
+        cluster_name: "{{cluster_name}}"
+      }
+    }
